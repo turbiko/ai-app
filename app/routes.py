@@ -34,8 +34,8 @@ def get_btc_price():
 
 @router.get("/btc_price")
 def get_cached_btc_price():
-    if "btc_price" in cache:
-        return cache["btc_price"]
+    # if "btc_price" in cache:
+    #     return cache["btc_price"]
     price_data = get_btc_price()
-    cache["btc_price"] = price_data
+    # cache["btc_price"] = price_data
     return price_data
