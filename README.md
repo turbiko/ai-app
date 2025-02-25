@@ -96,4 +96,7 @@ rm -rf .git/modules/app/module
 git rm -f app/module
 git commit -m "Removed ai-base submodule"
 
+## Run app
+git submodule update --init --recursive
+docker compose up -d
 
