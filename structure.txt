@@ -1,0 +1,11 @@
+ai-app/
+│── app/
+│   ├── main.py
+│   ├── routes.py
+│   ├── config.py
+│── .env
+│── Dockerfile
+│── requirements.txt
+│── README.md
+│── .gitignore
+│── run.sh
