@@ -6,7 +6,12 @@ WORKDIR /app
 
 # Копіюємо файли
 COPY requirements.txt .
+# Ініціалізація підмодуля
+RUN git submodule update --init --recursive
+
 RUN pip install --no-cache-dir -r requirements.txt
+
+
 
 COPY . .
 

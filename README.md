@@ -90,3 +90,10 @@ git pull --recurse-submodules
 
 git submodule add https://github.com/turbiko/ai-base.git app/module
 
+## delete git submodule
+git submodule deinit -f app/module
+rm -rf .git/modules/app/module
+git rm -f app/module
+git commit -m "Removed ai-base submodule"
+
+
