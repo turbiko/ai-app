@@ -3,7 +3,7 @@ FROM python:3.12-slim
 
 # Встановлюємо Git
 RUN apt-get update && apt-get install -y git
-
+RUN python -m pip install --upgrade pip
 # Встановлюємо робочу директорію
 WORKDIR /app
 
