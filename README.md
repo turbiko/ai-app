@@ -1,6 +1,7 @@
 # ai-app
 comments lang: UKrainian
-origin: Ukrine/Sweden
+
+origin: Ukraine/Sweden
 
 AI App - це основа для проєктів зі штучним інтелектом, що використовує FastAPI, Docker та Python. Цей репозиторій створений як база для майбутніх AI-застосунків, які можна форкати та розширювати.
 
