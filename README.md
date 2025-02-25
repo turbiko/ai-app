@@ -100,3 +100,12 @@ git commit -m "Removed ai-base submodule"
 git submodule update --init --recursive
 docker compose up -d
 
+## troubles on production
+
+chmod +x fix_docker_issues.sh
+./fix_docker_issues.sh
+
+## regular tasks
+
+chmod +x update_and_restart_app.sh
+./update_and_restart_app.sh
