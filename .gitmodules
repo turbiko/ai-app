@@ -1,0 +1,3 @@
+[submodule "app/module"]
+	path = app/module
+	url = https://github.com/turbiko/ai-base.git
