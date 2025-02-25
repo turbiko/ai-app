@@ -1,8 +1,8 @@
 # Використовуємо мінімальний Python
 FROM python:3.12-slim
 
-# Встановлюємо Git для роботи з підмодулями
-RUN apt-get update && apt install -y git
+# Встановлюємо Git
+RUN apt-get update && apt-get install -y git
 
 # Встановлюємо робочу директорію
 WORKDIR /app
@@ -10,13 +10,10 @@ WORKDIR /app
 # Копіюємо залежності
 COPY requirements.txt .
 
-# Оновлення підмодулів
-RUN git submodule update --init --recursive
-
 # Встановлення Python-залежностей
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Копіюємо увесь код
+# Копіюємо увесь код (включно з підмодулями, якщо вони вже оновлені)
 COPY . .
 
 # Запускаємо FastAPI
