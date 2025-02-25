@@ -105,6 +105,9 @@ docker compose up -d
 chmod +x fix_docker_issues.sh
 ./fix_docker_issues.sh
 
+docker logs ai-app-container --tail 50
+
+
 ## regular tasks
 
 chmod +x update_and_restart_app.sh
