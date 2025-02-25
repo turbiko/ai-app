@@ -2,7 +2,7 @@
 FROM python:3.12-slim
 
 # Встановлюємо Git для роботи з підмодулями
-RUN apt update && apt install -y git
+RUN apt-get update && apt install -y git
 
 # Встановлюємо робочу директорію
 WORKDIR /app
