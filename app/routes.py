@@ -8,7 +8,7 @@ from cachetools import TTLCache
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-cache = TTLCache(maxsize=1, ttl=30)  # Кешуємо на 30 секунд
+cache = TTLCache(maxsize=10, ttl=30)  # Кешуємо на 30 секунд
 
 router = APIRouter()
 
@@ -32,6 +32,7 @@ def get_btc_price():
             continue
     return {"error": "All APIs failed"}
 
+@router.get("/btc_price")
 def get_cached_btc_price():
     if "btc_price" in cache:
         return cache["btc_price"]
