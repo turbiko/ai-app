@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from app.routes import router
 from app.module.ai_core import AICore  # Імпорт з підмодуля
 import os
+import logging
+from cachetools import TTLCache
 
 app = FastAPI(title="AI App", version="1.0")
 
