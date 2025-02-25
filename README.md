@@ -58,6 +58,35 @@ http://127.0.0.1:8000/docs
 
 ---
 
+## 🔧 Використання змінних оточення
+Цей проєкт використовує **python-decouple** для роботи зі змінними середовища з `.env` файлу.
+
+Файл `.env`:
+```env
+API_HOST=0.0.0.0
+API_PORT=8000
+```
+
+Приклад використання у коді:
+```python
+from decouple import config
+
+HOST = config("API_HOST", default="127.0.0.1")
+PORT = config("API_PORT", default=8000, cast=int)
+```
+
+---
+
 ## 📌 Ліцензія
 MIT License
+
+================================================================
+
+other git`s
+Do not use simply "git pull" !
+
+git submodule update --init --recursive
+git pull --recurse-submodules
+
+git submodule add https://github.com/turbiko/ai-base.git app/module
 
