@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  ai-app:
+    build: .
+    container_name: ai-app-container
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    restart: always
+
+  db:
+    image: postgres:15
+    container_name: ai-app-db
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ai_database
+    volumes:
+      - ./.postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+
